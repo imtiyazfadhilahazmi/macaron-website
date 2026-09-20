@@ -1,26 +1,445 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --cream: #fff3bf;
+  --cream-light: #fff9e8;
+  --raspberry: #e85a78;
+  --pink: #f29aaa;
+  --deep-red: #8f1235;
+  --soft-red: #c83255;
+  --white: #fffdf5;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--cream);
+  color: var(--deep-red);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  width: 100%;
+  height: 90px;
+  padding: 0 5vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 38px;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.nav-links a {
+  transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.5;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 100vh;
+  padding: 150px 7vw 80px;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-copy {
+  width: 52%;
+  position: relative;
+  z-index: 5;
+}
+
+.eyebrow {
+  margin-bottom: 18px;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.hero h1 {
+  font-size: clamp(55px, 8vw, 125px);
+  line-height: 0.82;
+  letter-spacing: -6px;
+  font-weight: 950;
+}
+
+.hero-description {
+  margin-top: 35px;
+
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.hero-button {
+  display: inline-block;
+
+  margin-top: 30px;
+  padding: 15px 23px;
+
+  border: 2px solid var(--deep-red);
+  border-radius: 100px;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.hero-button:hover {
+  background: var(--deep-red);
+  color: var(--cream);
+  transform: translateY(-3px);
+}
+
+
+/* =========================
+   HERO ART
+========================= */
+
+.hero-art {
+  width: 48%;
+  height: 650px;
+
+  position: relative;
+}
+
+.pink-blob {
+  width: 570px;
+  height: 720px;
+
+  position: absolute;
+  right: -100px;
+  top: -20px;
+
+  background: var(--pink);
+
+  border-radius: 48% 52% 45% 55% / 45% 40% 60% 55%;
+
+  transform: rotate(8deg);
+}
+
+
+/* Fake macaron for now */
+
+.macaron {
+  width: 390px;
+  height: 300px;
+
+  position: absolute;
+  right: 60px;
+  top: 150px;
+
+  transform: rotate(-8deg);
+  z-index: 3;
+}
+
+.macaron-top,
+.macaron-bottom {
+  width: 100%;
+  height: 105px;
+
+  background: var(--raspberry);
+
+  border-radius: 50%;
+  border: 12px solid #d84365;
+
+  box-shadow:
+    inset 0 -12px 0 rgba(143, 18, 53, 0.12);
+}
+
+.macaron-top {
+  position: absolute;
+  top: 0;
+}
+
+.macaron-bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+.macaron-filling {
+  width: 94%;
+  height: 70px;
+
+  position: absolute;
+  left: 3%;
+  top: 112px;
+
+  background: var(--cream-light);
+
+  border-radius: 15px;
+
+  z-index: 2;
+}
+
+.raspberry {
+  position: absolute;
+  z-index: 5;
+
+  font-size: 90px;
+  font-weight: 900;
+
+  color: var(--deep-red);
+
+  transform: rotate(-20deg);
+}
+
+.raspberry-one {
+  right: 20px;
+  top: 85px;
+}
+
+.raspberry-two {
+  right: 400px;
+  bottom: 70px;
+  font-size: 55px;
+}
+
+
+/* =========================
+   NEW
+========================= */
+
+.new-text {
+  position: absolute;
+  right: 6vw;
+  bottom: 45px;
+
+  z-index: 10;
+
+  font-size: clamp(70px, 11vw, 170px);
+  font-weight: 950;
+  line-height: 0.7;
+
+  color: var(--raspberry);
+
+  transform: rotate(-7deg);
+
+  text-shadow:
+    8px 8px 0 var(--cream-light),
+    15px 15px 0 rgba(143, 18, 53, 0.15);
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+  min-height: 75vh;
+  padding: 130px 12vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background: var(--deep-red);
+  color: var(--cream);
+}
+
+.section-label {
+  margin-bottom: 35px;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.intro h2,
+.collection h2,
+.order h2 {
+  font-size: clamp(50px, 7vw, 105px);
+  line-height: 0.9;
+  letter-spacing: -4px;
+}
+
+.intro-text {
+  max-width: 550px;
+  margin-top: 45px;
+
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   COLLECTION
+========================= */
+
+.collection {
+  min-height: 70vh;
+  padding: 130px 12vw;
+
+  background: var(--pink);
+}
+
+.collection h2 {
+  color: var(--deep-red);
+}
+
+
+/* =========================
+   ORDER
+========================= */
+
+.order {
+  min-height: 75vh;
+  padding: 130px 12vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background: var(--cream-light);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  padding: 35px 6vw;
+
+  display: flex;
+  justify-content: space-between;
+
+  background: var(--deep-red);
+  color: var(--cream);
+
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+  .navbar {
+    height: 75px;
+  }
+
+  .nav-links {
+    gap: 15px;
+    font-size: 9px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 130px;
+
+    flex-direction: column;
+  }
+
+  .hero-copy {
+    width: 100%;
+  }
+
+  .hero h1 {
+    letter-spacing: -3px;
+  }
+
+  .hero-art {
+    width: 100%;
+    height: 500px;
+    margin-top: 30px;
+  }
+
+  .pink-blob {
+    width: 400px;
+    height: 500px;
+    right: -100px;
+  }
+
+  .macaron {
+    width: 290px;
+    height: 220px;
+
+    right: 20px;
+    top: 120px;
+  }
+
+  .macaron-top,
+  .macaron-bottom {
+    height: 80px;
+    border-width: 8px;
+  }
+
+  .macaron-filling {
+    height: 50px;
+    top: 85px;
+  }
+
+  .new-text {
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .intro,
+  .collection,
+  .order {
+    padding: 90px 8vw;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
