@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 export default function Home() {
   return (
     <main>
+      <Navbar />
 
       {/* HERO */}
       <section className="hero">
@@ -131,57 +132,33 @@ export default function Home() {
 
         <div className="flavour-grid">
 
-          <article className="flavour-card flavour-raspberry">
-            <div className="flavour-number">01</div>
+          <div className="flavour-visual">
+            <img
+              src="/images/flavours/raspberry.jpg"
+              alt="Raspberry macaron"
+            />
+          </div>
 
-            <div className="flavour-circle">
-              <span>🍓</span>
-            </div>
+          <div className="flavour-visual">
+            <img
+              src="/images/flavours/chocolate.jpg"
+              alt="Chocolate macaron"
+            />
+          </div>
 
-            <div className="flavour-info">
-              <p>FRUITY · TART · SWEET</p>
-              <h3>Raspberry</h3>
-            </div>
-          </article>
+          <div className="flavour-visual">
+            <img
+              src="/images/flavours/lemon.jpg"
+              alt="Lemon macaron"
+            />
+          </div>
 
-          <article className="flavour-card flavour-chocolate">
-            <div className="flavour-number">02</div>
-
-            <div className="flavour-circle">
-              <span>🍫</span>
-            </div>
-
-            <div className="flavour-info">
-              <p>RICH · CREAMY · DEEP</p>
-              <h3>Chocolate</h3>
-            </div>
-          </article>
-
-          <article className="flavour-card flavour-lemon">
-            <div className="flavour-number">03</div>
-
-            <div className="flavour-circle">
-              <span>🍋</span>
-            </div>
-
-            <div className="flavour-info">
-              <p>FRESH · BRIGHT · ZESTY</p>
-              <h3>Lemon</h3>
-            </div>
-          </article>
-
-          <article className="flavour-card flavour-matcha">
-            <div className="flavour-number">04</div>
-
-            <div className="flavour-circle">
-              <span>🍵</span>
-            </div>
-
-            <div className="flavour-info">
-              <p>EARTHY · SOFT · SMOOTH</p>
-              <h3>Matcha</h3>
-            </div>
-          </article>
+          <div className="flavour-visual">
+            <img
+              src="/images/flavours/matcha.jpg"
+              alt="Matcha macaron"
+            />
+          </div>
 
         </div>
       </section>

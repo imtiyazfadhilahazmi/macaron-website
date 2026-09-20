@@ -1729,3 +1729,133 @@ body::before {
     font-size: 1.35rem;
   }
 }
+
+/* ========================================
+   FLAVOUR VISUALS
+======================================== */
+
+.flavour-visual {
+  position: relative;
+
+  width: 190px;
+  height: 190px;
+
+  margin: 10px auto 24px;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  background: var(--white);
+
+  transform: rotate(-4deg);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.flavour-visual img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.flavour-card:hover .flavour-visual {
+  transform: rotate(3deg) scale(1.04);
+}
+
+.flavour-card:hover .flavour-visual img {
+  transform: scale(1.08);
+}
+
+.flavour-card:nth-child(1) .flavour-visual {
+  border-radius: 48% 52% 45% 55%;
+}
+
+.flavour-card:nth-child(2) .flavour-visual {
+  border-radius: 55% 45% 52% 48%;
+  transform: rotate(4deg);
+}
+
+.flavour-card:nth-child(3) .flavour-visual {
+  border-radius: 45% 55% 50% 50%;
+  transform: rotate(-3deg);
+}
+
+.flavour-card:nth-child(4) .flavour-visual {
+  border-radius: 52% 48% 45% 55%;
+  transform: rotate(5deg);
+}
+
+/* ========================================
+   ORDER PRODUCT
+======================================== */
+
+.order-product {
+  position: relative;
+
+  width: 280px;
+  height: 280px;
+
+  margin: 0 auto;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  background: var(--white);
+
+  box-shadow:
+    0 25px 60px rgba(143, 18, 53, 0.12);
+
+  transform: rotate(-5deg);
+
+  transition:
+    transform 0.4s ease,
+    background 0.3s ease;
+}
+
+.order-product img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.order-preview:hover .order-product {
+  transform: rotate(3deg) scale(1.03);
+}
+
+.order-preview:hover .order-product img {
+  transform: scale(1.07);
+}
+
+.option-image {
+  width: 54px;
+  height: 54px;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+}
+
+.option-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}

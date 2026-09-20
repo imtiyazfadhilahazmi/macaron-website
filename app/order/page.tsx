@@ -7,28 +7,24 @@ const flavours = [
     name: "Raspberry",
     description: "Fruity · Tart · Sweet",
     price: 18000,
-    emoji: "🍓",
     className: "order-raspberry",
   },
   {
     name: "Chocolate",
     description: "Rich · Creamy · Deep",
     price: 18000,
-    emoji: "🍫",
     className: "order-chocolate",
   },
   {
     name: "Lemon",
     description: "Fresh · Bright · Zesty",
     price: 17000,
-    emoji: "🍋",
     className: "order-lemon",
   },
   {
     name: "Matcha",
     description: "Earthy · Soft · Smooth",
     price: 19000,
-    emoji: "🍵",
     className: "order-matcha",
   },
 ];
@@ -74,8 +70,11 @@ export default function OrderPage() {
         <div className={`order-preview ${flavour.className}`}>
           <div className="order-blob" />
 
-          <div className="order-emoji">
-            {flavour.emoji}
+          <div className="order-product">
+            <img
+              src={`/images/flavours/${flavour.name.toLowerCase()}.jpg`}
+              alt={`${flavour.name} macaron`}
+            />
           </div>
 
           <p className="preview-label">
@@ -103,9 +102,12 @@ export default function OrderPage() {
                     selected === index ? "selected" : ""
                   }`}
                 >
-                  <span className="option-emoji">
-                    {item.emoji}
-                  </span>
+                <span className="option-image">
+                <img
+                    src={`/images/flavours/${item.name.toLowerCase()}.jpg`}
+                    alt=""
+                />
+                </span>
 
                   <span>
                     <strong>{item.name}</strong>
