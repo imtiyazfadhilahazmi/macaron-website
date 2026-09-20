@@ -189,7 +189,7 @@ export default function Home() {
           SWEET?
         </h2>
 
-        <a href="#" className="hero-button">
+        <a href="/order" className="hero-button">
           ORDER NOW →
         </a>
       </section>
