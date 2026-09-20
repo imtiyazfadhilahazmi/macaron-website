@@ -1,18 +1,8 @@
+import Navbar from "@/components/Navbar";
+
 export default function Home() {
   return (
     <main>
-      {/* NAVBAR */}
-      <nav className="navbar">
-        <a href="#" className="logo">
-          berry.
-        </a>
-
-        <div className="nav-links">
-          <a href="#about">ABOUT</a>
-          <a href="#collection">COLLECTION</a>
-          <a href="#order">ORDER</a>
-        </div>
-      </nav>
 
       {/* HERO */}
       <section className="hero">
