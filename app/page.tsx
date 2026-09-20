@@ -39,14 +39,15 @@ export default function Home() {
         <div className="hero-art">
           <div className="pink-blob" />
 
-          <div className="macaron">
-            <div className="macaron-top" />
-            <div className="macaron-filling" />
-            <div className="macaron-bottom" />
-          </div>
+          <img
+            src="/images/raspberry-macaron.jpg"
+            alt="Raspberry macaron"
+            className="hero-macaron"
+          />
 
-          <div className="raspberry raspberry-one">✦</div>
-          <div className="raspberry raspberry-two">✦</div>
+          <div className="berry berry-one">●</div>
+          <div className="berry berry-two">●</div>
+          <div className="berry berry-three">●</div>
         </div>
 
         <div className="new-text">
