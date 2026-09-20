@@ -654,3 +654,239 @@ footer {
 
   font-size: 35px;
 }
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+  min-height: 100vh;
+  padding: 100px 7vw 80px;
+
+  position: relative;
+  overflow: hidden;
+
+  background: var(--deep-red);
+  color: var(--cream);
+}
+
+.about-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.about-small {
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  text-align: right;
+}
+
+.about-main {
+  min-height: 650px;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+}
+
+.about-main h2 {
+  max-width: 1100px;
+
+  font-size: clamp(60px, 10vw, 150px);
+  line-height: 0.78;
+  letter-spacing: -8px;
+
+  position: relative;
+  z-index: 3;
+}
+
+.about-main h2 span {
+  display: inline-block;
+
+  margin-left: 5vw;
+
+  color: var(--pink);
+
+  font-style: italic;
+
+  transform: rotate(-5deg);
+}
+
+
+/* Decorative circle */
+
+.about-main::before {
+  content: "";
+
+  width: 450px;
+  height: 450px;
+
+  position: absolute;
+  right: 5%;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  border: 3px solid var(--pink);
+  border-radius: 50%;
+
+  opacity: 0.8;
+}
+
+
+/* Decorative blob */
+
+.about-main::after {
+  content: "";
+
+  width: 250px;
+  height: 250px;
+
+  position: absolute;
+  right: 14%;
+  top: 25%;
+
+  background: var(--raspberry);
+
+  border-radius: 52% 48% 60% 40%;
+
+  transform: rotate(25deg);
+
+  opacity: 0.85;
+}
+
+
+/* Sticker */
+
+.about-sticker {
+  width: 180px;
+  height: 180px;
+
+  position: absolute;
+  right: 12%;
+  top: 35%;
+
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--cream);
+  color: var(--deep-red);
+
+  border-radius: 50%;
+
+  transform: rotate(12deg);
+
+  box-shadow: 10px 10px 0 var(--raspberry);
+}
+
+.about-sticker span {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+
+  font-size: 24px;
+}
+
+.about-sticker p {
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+
+/* Bottom */
+
+.about-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  border-top: 1px solid rgba(255, 243, 191, 0.4);
+
+  padding-top: 30px;
+}
+
+.about-bottom p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.about-bottom p:last-child {
+  font-size: 45px;
+  font-weight: 900;
+  letter-spacing: -3px;
+}
+
+.about-bottom strong {
+  color: var(--pink);
+}
+
+.about {
+  padding: 80px 8vw 60px;
+}
+
+.about-top {
+  display: block;
+}
+
+.about-small {
+  margin-top: 25px;
+  text-align: left;
+}
+
+.about-main {
+  min-height: 600px;
+}
+
+.about-main h2 {
+  font-size: clamp(55px, 15vw, 90px);
+  letter-spacing: -5px;
+}
+
+.about-main h2 span {
+  margin-left: 0;
+}
+
+.about-main::before {
+  width: 280px;
+  height: 280px;
+
+  right: -100px;
+}
+
+.about-main::after {
+  width: 160px;
+  height: 160px;
+
+  right: 0;
+}
+
+.about-sticker {
+  width: 130px;
+  height: 130px;
+
+  right: 5%;
+  top: 55%;
+}
+
+.about-sticker p {
+  font-size: 9px;
+}
+
+.about-bottom {
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.about-bottom p:last-child {
+  font-size: 30px;
+}

@@ -56,19 +56,54 @@ export default function Home() {
       </section>
 
       {/* INTRO */}
-      <section id="about" className="intro">
-        <p className="section-label">01 — ABOUT</p>
+      <section id="about" className="about">
+        <div className="about-top">
+          <p className="section-label">01 — ABOUT</p>
 
-        <h2>
-          SWEETNESS,
-          <br />
-          WITH PERSONALITY.
-        </h2>
+          <p className="about-small">
+            HANDMADE WITH A LITTLE
+            <br />
+            EXTRA PERSONALITY.
+          </p>
+        </div>
 
-        <p className="intro-text">
-          Tiny handmade treats with bold flavours, playful colours
-          and just enough sweetness to make an ordinary day feel special.
-        </p>
+        <div className="about-main">
+          <h2>
+            SWEETNESS
+            <br />
+            DOESN'T HAVE
+            <br />
+            TO BE
+            <span>SERIOUS.</span>
+          </h2>
+
+          <div className="about-sticker">
+            <span>✦</span>
+            <p>
+              MADE
+              <br />
+              FOR
+              <br />
+              SWEET
+              <br />
+              MOMENTS
+            </p>
+          </div>
+        </div>
+
+        <div className="about-bottom">
+          <p>
+            A tiny dessert.
+            <br />
+            A bright colour.
+            <br />
+            A little surprise.
+          </p>
+
+          <p>
+            That's <strong>berry.</strong>
+          </p>
+        </div>
       </section>
 
       {/* COLLECTION PLACEHOLDER */}
