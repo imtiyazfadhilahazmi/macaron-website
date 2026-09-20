@@ -53,6 +53,14 @@ export default function Home() {
         <div className="new-text">
           NEW
         </div>
+
+        <div className="hero-side-text">
+          SWEET
+          <br />
+          LITTLE
+          <br />
+          THINGS
+        </div>
       </section>
 
       {/* INTRO */}
@@ -105,6 +113,15 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      <div className="marquee">
+        <div className="marquee-track">
+          <span>MADE WITH LOVE ✦</span>
+          <span>SWEET LITTLE THINGS ✦</span>
+          <span>MADE WITH LOVE ✦</span>
+          <span>SWEET LITTLE THINGS ✦</span>
+        </div>
+      </div>
 
       {/* COLLECTION PLACEHOLDER */}
       <section id="collection" className="collection">
