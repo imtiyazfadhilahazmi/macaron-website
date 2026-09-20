@@ -313,15 +313,172 @@ button {
    COLLECTION
 ========================= */
 
+/* =========================
+   COLLECTION
+========================= */
+
 .collection {
-  min-height: 70vh;
-  padding: 130px 12vw;
+  min-height: 100vh;
+  padding: 140px 7vw;
 
   background: var(--pink);
+
+  overflow: hidden;
 }
 
-.collection h2 {
+.collection-heading {
+  max-width: 800px;
+}
+
+.collection-heading h2 {
+  font-size: clamp(55px, 8vw, 120px);
+  line-height: 0.82;
+  letter-spacing: -6px;
+
   color: var(--deep-red);
+}
+
+.collection-intro {
+  max-width: 430px;
+  margin-top: 35px;
+
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   FLAVOUR GRID
+========================= */
+
+.flavour-grid {
+  margin-top: 100px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.flavour-card {
+  min-height: 480px;
+  padding: 35px;
+
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 35px;
+
+  transition:
+    transform 0.35s ease,
+    border-radius 0.35s ease;
+}
+
+.flavour-card:hover {
+  transform: translateY(-10px) rotate(-1deg);
+  border-radius: 50px;
+}
+
+
+/* Raspberry */
+
+.flavour-raspberry {
+  background: var(--cream);
+  color: var(--deep-red);
+}
+
+
+/* Chocolate */
+
+.flavour-chocolate {
+  background: #d99a75;
+  color: #5d241d;
+}
+
+
+/* Lemon */
+
+.flavour-lemon {
+  background: #fff0a8;
+  color: #8a5210;
+}
+
+
+/* Matcha */
+
+.flavour-matcha {
+  background: #c9d6a4;
+  color: #405329;
+}
+
+
+/* Number */
+
+.flavour-number {
+  position: absolute;
+  top: 30px;
+  right: 35px;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+
+/* Big circle */
+
+.flavour-circle {
+  width: 290px;
+  height: 290px;
+
+  position: absolute;
+  left: 50%;
+  top: 42%;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.38);
+
+  transition:
+    transform 0.4s ease,
+    scale 0.4s ease;
+}
+
+.flavour-card:hover .flavour-circle {
+  transform: translate(-50%, -50%) rotate(8deg);
+  scale: 1.08;
+}
+
+.flavour-circle span {
+  font-size: 120px;
+}
+
+
+/* Text */
+
+.flavour-info {
+  position: absolute;
+  left: 35px;
+  bottom: 30px;
+}
+
+.flavour-info p {
+  margin-bottom: 8px;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.flavour-info h3 {
+  font-size: clamp(40px, 5vw, 70px);
+  line-height: 0.9;
+  letter-spacing: -3px;
 }
 
 
@@ -433,6 +590,29 @@ footer {
   footer {
     flex-direction: column;
     gap: 10px;
+  }
+
+  .flavour-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 70px;
+  }
+
+  .flavour-card {
+    min-height: 400px;
+  }
+
+  .flavour-circle {
+    width: 220px;
+    height: 220px;
+  }
+
+  .flavour-circle span {
+    font-size: 90px;
+  }
+
+  .collection-heading h2 {
+    letter-spacing: -3px;
   }
 }
 

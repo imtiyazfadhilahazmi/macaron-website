@@ -73,9 +73,75 @@ export default function Home() {
 
       {/* COLLECTION PLACEHOLDER */}
       <section id="collection" className="collection">
-        <p className="section-label">02 — COLLECTION</p>
+        <div className="collection-heading">
+          <p className="section-label">02 — COLLECTION</p>
 
-        <h2>COMING SOON.</h2>
+          <h2>
+            PICK YOUR
+            <br />
+            SWEETNESS.
+          </h2>
+
+          <p className="collection-intro">
+            Four little flavours, each with its own personality.
+          </p>
+        </div>
+
+        <div className="flavour-grid">
+
+          <article className="flavour-card flavour-raspberry">
+            <div className="flavour-number">01</div>
+
+            <div className="flavour-circle">
+              <span>🍓</span>
+            </div>
+
+            <div className="flavour-info">
+              <p>FRUITY · TART · SWEET</p>
+              <h3>Raspberry</h3>
+            </div>
+          </article>
+
+          <article className="flavour-card flavour-chocolate">
+            <div className="flavour-number">02</div>
+
+            <div className="flavour-circle">
+              <span>🍫</span>
+            </div>
+
+            <div className="flavour-info">
+              <p>RICH · CREAMY · DEEP</p>
+              <h3>Chocolate</h3>
+            </div>
+          </article>
+
+          <article className="flavour-card flavour-lemon">
+            <div className="flavour-number">03</div>
+
+            <div className="flavour-circle">
+              <span>🍋</span>
+            </div>
+
+            <div className="flavour-info">
+              <p>FRESH · BRIGHT · ZESTY</p>
+              <h3>Lemon</h3>
+            </div>
+          </article>
+
+          <article className="flavour-card flavour-matcha">
+            <div className="flavour-number">04</div>
+
+            <div className="flavour-circle">
+              <span>🍵</span>
+            </div>
+
+            <div className="flavour-info">
+              <p>EARTHY · SOFT · SMOOTH</p>
+              <h3>Matcha</h3>
+            </div>
+          </article>
+
+        </div>
       </section>
 
       {/* ORDER PLACEHOLDER */}
