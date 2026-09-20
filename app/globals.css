@@ -90,14 +90,47 @@ button {
 ========================= */
 
 .hero {
+  position: relative;
   min-height: 100vh;
-  padding-top: 140px;
 
-  display: flex;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
   align-items: center;
 
-  position: relative;
+  gap: 40px;
+
+  padding: 150px 7vw 90px;
+
   overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+
+  max-width: 650px;
+}
+
+.hero-content h1 {
+  font-size: clamp(4rem, 8vw, 8.5rem);
+  line-height: 0.82;
+  letter-spacing: -0.055em;
+}
+
+.hero-content h1 span {
+  display: inline-block;
+
+  color: var(--raspberry);
+
+  transform: translateX(0.12em) rotate(-3deg);
+}
+
+.hero-content p {
+  max-width: 420px;
+  margin-top: 28px;
+
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .hero-copy {
@@ -159,25 +192,27 @@ button {
 ========================= */
 
 .hero-art {
-  width: 48%;
-  height: 650px;
-
   position: relative;
+
+  min-height: 620px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pink-blob {
-  width: 570px;
-  height: 720px;
-
   position: absolute;
-  right: -100px;
-  top: -20px;
+  z-index: 1;
+
+  width: min(38vw, 480px);
+  height: min(38vw, 480px);
+
+  border-radius: 45% 55% 60% 40%;
 
   background: var(--pink);
 
-  border-radius: 48% 52% 45% 55% / 45% 40% 60% 55%;
-
-  transform: rotate(8deg);
+  transform: rotate(12deg);
 }
 
 .pink-blob::before {
@@ -199,26 +234,23 @@ button {
 /* Fake macaron for now */
 
 .hero-macaron {
-  width: 460px;
-  height: 460px;
+  position: relative;
+  z-index: 3;
 
-  position: absolute;
-  right: 15px;
-  top: 100px;
+  width: min(42vw, 540px);
+  height: min(42vw, 540px);
 
   object-fit: cover;
 
-  border-radius: 50%;
+  border-radius: 48% 52% 45% 55%;
 
-  z-index: 3;
+  transform: rotate(-8deg);
 
-  transform: rotate(-7deg);
+  filter: drop-shadow(
+    0 35px 35px rgba(143, 18, 53, 0.16)
+  );
 
-  box-shadow: 20px 25px 0 rgba(143, 18, 53, 0.08);
-
-  transition:
-    transform 0.4s ease,
-    scale 0.4s ease;
+  animation: floatMacaron 5s ease-in-out infinite;
 }
 
 .hero-macaron:hover {
@@ -256,22 +288,16 @@ button {
 
 .new-text {
   position: absolute;
-  right: 6vw;
-  bottom: 45px;
 
-  z-index: 10;
+  top: 17%;
+  right: 9%;
 
-  font-size: clamp(70px, 11vw, 170px);
-  font-weight: 950;
-  line-height: 0.7;
+  z-index: 5;
 
-  color: var(--raspberry);
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 2vw, 1.8rem);
 
-  transform: rotate(-7deg);
-
-  text-shadow:
-    8px 8px 0 var(--cream-light),
-    15px 15px 0 rgba(143, 18, 53, 0.15);
+  transform: rotate(8deg);
 }
 
 
@@ -1487,16 +1513,20 @@ body::before {
 .hero-side-text {
   position: absolute;
 
-  left: 2vw;
-  bottom: 110px;
+  right: 2vw;
+  bottom: 12%;
+
+  z-index: 4;
+
+  font-family: var(--font-display);
+  font-size: clamp(0.8rem, 1.2vw, 1.2rem);
+
+  line-height: 0.95;
+  letter-spacing: 0.12em;
 
   writing-mode: vertical-rl;
 
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 4px;
-
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 @media (max-width: 800px) {
@@ -1858,4 +1888,222 @@ body::before {
   display: block;
 
   object-fit: cover;
+}
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 18vw;
+  height: 18vw;
+
+  min-width: 140px;
+  min-height: 140px;
+
+  left: -7vw;
+  bottom: -5vw;
+
+  border-radius: 50%;
+
+  background: var(--pink);
+
+  opacity: 0.7;
+}
+
+.hero::after {
+  content: "✦";
+
+  position: absolute;
+
+  right: 18%;
+  top: 20%;
+
+  font-size: clamp(2rem, 5vw, 5rem);
+
+  color: var(--deep-red);
+
+  transform: rotate(15deg);
+}
+
+@media (max-width: 1000px) {
+  .hero {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+
+    padding-top: 150px;
+    padding-bottom: 100px;
+
+    text-align: center;
+  }
+
+  .hero-content {
+    margin: 0 auto;
+  }
+
+  .hero-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-art {
+    min-height: 520px;
+  }
+
+  .hero-macaron {
+    width: min(65vw, 500px);
+    height: min(65vw, 500px);
+  }
+
+  .pink-blob {
+    width: min(58vw, 450px);
+    height: min(58vw, 450px);
+  }
+
+  .new-text {
+    right: 12%;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 125px 20px 70px;
+
+    gap: 20px;
+  }
+
+  .hero-content {
+    text-align: left;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(3.4rem, 17vw, 5.5rem);
+    line-height: 0.84;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+    margin-top: 22px;
+  }
+
+  .hero-art {
+    min-height: 390px;
+  }
+
+  .hero-macaron {
+    width: min(78vw, 360px);
+    height: min(78vw, 360px);
+  }
+
+  .pink-blob {
+    width: min(70vw, 320px);
+    height: min(70vw, 320px);
+  }
+
+  .new-text {
+    top: 5%;
+    right: 10%;
+
+    font-size: 1rem;
+  }
+
+  .hero-side-text {
+    display: none;
+  }
+
+  .hero::after {
+    right: 8%;
+    top: 44%;
+
+    font-size: 2rem;
+  }
+}
+
+.collection {
+  position: relative;
+
+  padding: 120px 7vw;
+
+  overflow: hidden;
+}
+
+.collection-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 70px;
+}
+
+.collection-header h2 {
+  font-size: clamp(3.5rem, 8vw, 8rem);
+
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+}
+
+.collection-header p {
+  max-width: 280px;
+
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .collection {
+    padding: 80px 20px;
+  }
+
+  .collection-header {
+    display: block;
+
+    margin-bottom: 45px;
+  }
+
+  .collection-header h2 {
+    font-size: 4rem;
+  }
+
+  .collection-header p {
+    margin-top: 24px;
+  }
+
+  .flavour-grid {
+    gap: 18px;
+  }
+
+  .flavour-visual {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    padding: 80px 20px;
+  }
+
+  .about-main h2 {
+    font-size: clamp(3rem, 14vw, 5rem);
+    line-height: 0.86;
+  }
+
+  .about-sticker {
+    width: 120px;
+    height: 120px;
+
+    margin-top: 35px;
+  }
+
+  .about-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 25px;
+
+    margin-top: 50px;
+  }
 }
