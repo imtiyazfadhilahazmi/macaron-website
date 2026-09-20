@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Archivo_Black, DM_Sans } from "next/font/google";
 import "./globals.css";
+import { CartProvider } from "@/components/CartContext";
 
 const archivoBlack = Archivo_Black({
   variable: "--font-display",
@@ -28,7 +29,9 @@ export default function RootLayout({
       <body
         className={`${archivoBlack.variable} ${dmSans.variable}`}
       >
+        <CartProvider>
         {children}
+        </CartProvider>
       </body>
     </html>
   );

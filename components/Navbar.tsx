@@ -41,6 +41,10 @@ export default function Navbar() {
           <a href="/order" onClick={closeMenu}>
             ORDER
           </a>
+
+          <a href="/cart" onClick={closeMenu}>
+            BOX
+          </a>
         </div>
 
         <button

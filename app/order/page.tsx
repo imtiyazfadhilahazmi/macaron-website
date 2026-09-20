@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useCart } from "@/components/CartContext";
 
 const flavours = [
   {
@@ -33,8 +34,20 @@ export default function OrderPage() {
   const [selected, setSelected] = useState(0);
   const [quantity, setQuantity] = useState(6);
 
+  const { addItem } = useCart();
+
   const flavour = flavours[selected];
   const total = flavour.price * quantity;
+
+  const handleAddToBox = () => {
+    addItem({
+      name: flavour.name,
+      price: flavour.price,
+      quantity,
+    });
+  
+    alert(`${quantity} × ${flavour.name} added to your box!`);
+  };
 
   return (
     <main className="order-page">

@@ -2107,3 +2107,160 @@ body::before {
     margin-top: 50px;
   }
 }
+
+/* ========================================
+   CART
+======================================== */
+
+.cart-page {
+  min-height: 100vh;
+  padding: 30px 7vw 80px;
+}
+
+.cart-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.cart-content {
+  max-width: 1000px;
+  margin: 120px auto 0;
+}
+
+.cart-content h1 {
+  margin: 25px 0 70px;
+
+  font-size: clamp(4rem, 9vw, 9rem);
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+}
+
+.cart-content h1 span {
+  color: var(--raspberry);
+}
+
+.empty-cart {
+  padding: 50px 0;
+
+  border-top: 1px solid rgba(143, 18, 53, 0.2);
+}
+
+.empty-cart p {
+  margin-bottom: 30px;
+}
+
+.cart-cta,
+.checkout-button {
+  display: inline-block;
+
+  padding: 17px 25px;
+
+  border: 0;
+  border-radius: 999px;
+
+  background: var(--deep-red);
+  color: var(--cream);
+
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.cart-cta:hover,
+.checkout-button:hover {
+  transform: translateY(-3px);
+}
+
+.cart-items {
+  border-top: 1px solid rgba(143, 18, 53, 0.2);
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding: 28px 0;
+
+  border-bottom: 1px solid rgba(143, 18, 53, 0.2);
+}
+
+.cart-item h2 {
+  font-size: 1.7rem;
+}
+
+.cart-item p {
+  margin-top: 7px;
+
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.cart-item-right {
+  display: flex;
+  align-items: center;
+
+  gap: 25px;
+}
+
+.cart-item-right strong {
+  font-size: 1.1rem;
+}
+
+.cart-item-right button,
+.clear-button {
+  border: 0;
+  background: transparent;
+
+  color: var(--deep-red);
+
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+
+  cursor: pointer;
+}
+
+.cart-item-right button:hover,
+.clear-button:hover {
+  text-decoration: underline;
+}
+
+.cart-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 35px 0;
+
+  font-size: 1.1rem;
+}
+
+.cart-summary strong {
+  font-family: var(--font-display);
+  font-size: 2rem;
+}
+
+.cart-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.clear-button {
+  padding: 15px 0;
+}
